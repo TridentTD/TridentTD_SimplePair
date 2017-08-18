@@ -21,8 +21,13 @@ void On_SimplePair_ReceivedData(){
   AP_SSID        = SimplePair.getSSID();
   AP_PASSWORD    = SimplePair.getSimplePairData(); 
 
+  uint8_t *AP_BSSID;
+  AP_BSSID = SimplePair.getBSSID(AP_BSSID);
+
   Serial.println("Recv. SSID     : " + AP_SSID);  
   Serial.println("Recv. PASSWORD : " + AP_PASSWORD);
+  Serial.println("Recv. BSSID    : " + mac2string(AP_BSSID));
+  Serial.println();
 }
 
 /* เมื่อ STA ไม่สามารถพบ Simple-Pair ใดๆ */
@@ -51,7 +56,7 @@ void setup() {
     //เชื่อมต่อ WiFi
     WiFi.begin(AP_SSID.c_str(), AP_PASSWORD.c_str());
     while (WiFi.waitForConnectResult() != WL_CONNECTED);
-    Serial.println("WiFi connected to ssid "+AP_SSID)
+    Serial.println("WiFi connected to ssid " + AP_SSID);
     Serial.print("IP Address is "); Serial.println(WiFi.localIP());
   }
 }
