@@ -47,6 +47,9 @@ void setup() {
   SimplePair.setSimplePairKey(SIMPLE_PAIR_KEY);
   SimplePair.setEspNowKey(ESP_NOW_KEY); // key สำหรับ จะใช้ใน ESP-NOW เพื่อการจับคู่ โดยจะถูกส่งไปให้ทาง Simple-Pair 
   SimplePair.onSentData(&On_SimplaPair_SentData);
+
+  //SimplePair.tuneoff_WiFiStatusLed();   //หากจะปิด LED แสดงสถานะ WiFi
+  //SimplePair.tuneon_WiFiStatusLed();    //หากจะเปิด LED แสดงสถานะ WiFi
 }
 
 void loop() {

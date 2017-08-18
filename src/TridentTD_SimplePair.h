@@ -72,6 +72,9 @@ public:
   void              onReceivedData(SimplePairHandler fn);
   void              onScanNotFound(SimplePairHandler fn);
 
+  void              tuneon_WiFiStatusLed();
+  void              turnoff_WiFiStatusLed();
+
 
   bool      setMaxScan(uint8_t max_scan=10);
   

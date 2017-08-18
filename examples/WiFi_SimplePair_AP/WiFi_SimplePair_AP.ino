@@ -28,6 +28,9 @@ void setup() {
   SimplePair.setSimplePairKey(SIMPLE_PAIR_KEY);
   SimplePair.setSimplePairData(AP_PASSWORD); // พาสเวิร์ดของ AP นี้จะถูกส่งไปให้ทาง Simple-Pair 
 
+  //SimplePair.tuneoff_WiFiStatusLed();   //หากจะปิด LED แสดงสถานะ WiFi
+  //SimplePair.tuneon_WiFiStatusLed();    //หากจะเปิด LED แสดงสถานะ WiFi
+
 }
 void loop() {
   SimplePair.annouce();  // AP ปล่อยสัญญาณ Simple-Pair

@@ -5,7 +5,18 @@ TridentTD_SimplePair* staticThis;
 TridentTD_SimplePair::TridentTD_SimplePair(SimplePairMode_t sp_mode){
   staticThis = this; 
   staticThis->_sp_mode = sp_mode;
+  staticThis->tuneon_WiFiStatusLed();
 }
+
+void TridentTD_SimplePair::tuneon_WiFiStatusLed(){
+  wifi_status_led_install(2,  PERIPHS_IO_MUX_GPIO2_U, FUNC_GPIO2);
+}
+
+void TridentTD_SimplePair::turnoff_WiFiStatusLed(){
+  wifi_status_led_uninstall ();
+}
+
+
 
 bool TridentTD_SimplePair::mode(SimplePairMode_t sp_mode) {
   if(sp_mode != SP_OFF && sp_mode != SP_STA && sp_mode != SP_AP  )
@@ -370,7 +381,7 @@ void TridentTD_SimplePair::_simple_pair_sta_status_cb(){
     /* TODO: Try to use the ex-key communicate with AP, for example use ESP-NOW */
     /* if test ok , deinit simple pair */
     simple_pair_deinit();
-    
+
     if(staticThis->_sp_receiveddata_cb) {
       staticThis->_sp_receiveddata_cb();
     }

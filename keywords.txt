@@ -52,6 +52,9 @@ getDestinationMacAddress	KEYWORD2
 getBSSID	KEYWORD2
 getSSID	KEYWORD2
 
+tuneon_WiFiStatusLed	KEYWORD2
+turnoff_WiFiStatusLed	KEYWORD2
+
 mac2string	KEYWORD2
 key2string	KEYWORD2
 
