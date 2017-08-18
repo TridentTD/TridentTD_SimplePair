@@ -4,12 +4,12 @@ Esp8266  Simple-Pair Library
 ---------------------------------------------
 
 TridentTD_SimplePair is a library for  
-exchanging  WiFi SSID & Password   or ESP-NOW key
-between ESP8266 modules by ESP Simple-Pair SDK API.
+exchanging  WiFi SSID & Password   or ESP-NOW key  
+between ESP8266 modules by ESP Simple-Pair SDK API.  
 
-![tridenttd_simplepair_lib](tridenttd_simplepair_lib.png)
+![tridenttd_simplepair_lib](tridenttd_simplepair_lib.png)  
 
-You can use functions like this
+You can use functions like this  
 
 **AP Mode**
 
@@ -32,7 +32,7 @@ You can use functions like this
 
 Example
 ---
-Please look in example folder.
-
-18 August 2560BE  (2017)
-Ven. Phaisarn Techajaruwong
+Please look in example folder.  
+  
+18 August 2560BE  (2017)  
+Ven. Phaisarn Techajaruwong  
