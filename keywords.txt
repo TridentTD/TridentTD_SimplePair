@@ -1,0 +1,76 @@
+#######################################
+#	Syntax	Coloring	Map	For	TridentTD_SimplePair
+#######################################
+
+#######################################
+#	Library	(KEYWORD3)
+#######################################
+
+TridentTD_SimplePair	KEYWORD3
+
+
+#######################################
+#	Datatypes	(KEYWORD1)
+#######################################
+
+SimplePair	KEYWORD1
+
+#######################################
+#	Methods	and	Functions	(KEYWORD2)
+#######################################
+
+mode	KEYWORD2
+getMode	KEYWORD2
+isSleep	KEYWORD2
+isSentData	KEYWORD2
+isReceivedData	KEYWORD2
+onSentData	KEYWORD2
+onReceivedData	KEYWORD2
+onScanNotFound	KEYWORD2
+annouce	KEYWORD2
+scanSP	KEYWORD2
+begin	KEYWORD2
+end	KEYWORD2
+status	KEYWORD2
+setMaxScan	KEYWORD2
+setPublicKey	KEYWORD2
+getPublicKey	KEYWORD2
+setPrivateKey	KEYWORD2
+getPrivateKey	KEYWORD2
+setSimplePairKey	KEYWORD2
+getSimplePairKey	KEYWORD2
+setSimplePairData	KEYWORD2
+getSimplePairData	KEYWORD2
+setEspNowKey	KEYWORD2
+getEspNowKey	KEYWORD2
+setPassword16Byte	KEYWORD2
+getPassword16Byte	KEYWORD2s
+getSourceMacAddress	KEYWORD2
+getSourceMacAddress	KEYWORD2
+getDestinationMacAddress	KEYWORD2
+getDestinationMacAddress	KEYWORD2
+
+mac2string	KEYWORD2
+key2string	KEYWORD2
+
+getVersion	KEYWORD2
+
+#######################################
+#	Constants	(LITERAL1)
+#######################################
+
+SP_OFF		LITERAL1
+SP_STA	LITERAL1
+SP_AP	LITERAL1
+
+ST_BEGIN	LITERAL1
+ST_FINISH	LITERAL1
+ST_SLEEP	LITERAL1
+ST_AP_RECV_NEG	LITERAL1
+ST_AP_REFUSE_NEG	LITERAL1
+ST_WAIT_TIMEOUT	LITERAL1
+ST_SEND_ERROR	LITERAL1
+ST_KEY_INSTALL_ERR	LITERAL1
+ST_KEY_OVERLAP_ERR	LITERAL1
+ST_OP_ERROR	LITERAL1
+ST_UNKNOWN_ERROR	LITERAL1
