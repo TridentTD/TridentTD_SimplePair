@@ -8,7 +8,7 @@ TridentTD_SimplePair::TridentTD_SimplePair(SimplePairMode_t sp_mode){
   staticThis->tuneon_WiFiStatusLed();
 }
 
-void TridentTD_SimplePair::tuneon_WiFiStatusLed(){
+void TridentTD_SimplePair::turnon_WiFiStatusLed(){
   wifi_status_led_install(2,  PERIPHS_IO_MUX_GPIO2_U, FUNC_GPIO2);
 }
 
