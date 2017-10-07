@@ -72,7 +72,7 @@ public:
   void              onReceivedData(SimplePairHandler fn);
   void              onScanNotFound(SimplePairHandler fn);
 
-  void              tuneon_WiFiStatusLed();
+  void              turnon_WiFiStatusLed();
   void              turnoff_WiFiStatusLed();
 
 
