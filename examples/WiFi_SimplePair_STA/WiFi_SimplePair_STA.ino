@@ -33,6 +33,7 @@ void On_SimplePair_ReceivedData(){
 /* เมื่อ STA ไม่สามารถพบ Simple-Pair ใดๆ */
 void On_SimplePair_ScanNotFound(){
   Serial.println("Simple-Pair not found!");
+  Serial.println("Change to manual WiFI connection.");
 
   /* กำหนด AP_SSID และ AP_PASSSWORD ที่รู้จักเอง */
   AP_SSID     = "---- KNOWN SSID -------";
@@ -45,12 +46,14 @@ void setup() {
 
   Serial.println("Simple-Pair STA Mode");
   
-  SimplePair.mode(SP_STA);
-  SimplePair.setSimplePairKey(SIMPLE_PAIR_KEY);
-  SimplePair.onReceivedData(&On_SimplePair_ReceivedData);
-  SimplePair.onScanNotFound(&On_SimplePair_ScanNotFound);
+  SimplePair.mode(SP_STA);                               // กำหนด SimplePair เป็นโหมด STATION
+  SimplePair.setSimplePairKey(SIMPLE_PAIR_KEY);          // กำหนด กุญแจ SimplePair Key
+  SimplePair.onReceivedData(On_SimplePair_ReceivedData); // กำหนด function เมื่อมีการรับค่าทาง SimplePair
+  SimplePair.onScanNotFound(On_SimplePair_ScanNotFound); // กำหนด function เมื่อ scan ไม่พบ SimplePair
+
+  //SimplePair.setWiFiStatusLed(false);                  //หากจะปิด LED แสดงสถานะ WiFi
   
-  SimplePair.scanSP();  // STA ทำการแสกนหา Simple-Pair
+  SimplePair.scanSP();  // โหมด STATION ทำการแสกนหา Simple-Pair ที่ annouce ออกมา
 
   if( AP_SSID != "") {
     //เชื่อมต่อ WiFi

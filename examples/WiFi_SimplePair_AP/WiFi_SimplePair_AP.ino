@@ -21,20 +21,17 @@ void setup() {
   Serial.println();
 
   WiFi.softAPdisconnect(true);
-  WiFi.softAP(AP_SSID.c_str(), AP_PASSWORD.c_str());
+  WiFi.softAP(AP_SSID.c_str(), AP_PASSWORD.c_str());  // ทำให้ ESP8266 เป็นแม่ข่าย WiFi softAP
 
   Serial.println("Simple-Pair AP Mode");
-  SimplePair.mode(SP_AP);
-  SimplePair.setSimplePairKey(SIMPLE_PAIR_KEY);
-  SimplePair.setSimplePairData(AP_PASSWORD); // พาสเวิร์ดของ AP นี้จะถูกส่งไปให้ทาง Simple-Pair 
+  SimplePair.mode(SP_AP);                         // กำหนด SimplePair เป็นโหมด AccessPoint เพื่อเป็นฝั่งส่งข้อมูล
+  SimplePair.setSimplePairKey(SIMPLE_PAIR_KEY);   // กำหนด กุญแจ SimplePair Key
+  SimplePair.setSimplePairData(AP_PASSWORD);      // ข้อมูล คือ พาสเวิร์ดของ AP นี้จะถูกส่งไปให้ทาง Simple-Pair 
 
-  //SimplePair.turnoff_WiFiStatusLed();   //หากจะปิด LED แสดงสถานะ WiFi
-  //SimplePair.turnon_WiFiStatusLed();    //หากจะเปิด LED แสดงสถานะ WiFi
+  //SimplePair.setWiFiStatusLed(false);   //หากจะปิด LED แสดงสถานะ WiFi
 
 }
+
 void loop() {
-  SimplePair.annouce();  // AP ปล่อยสัญญาณ Simple-Pair
+  SimplePair.annouce();  // โหมด SP_AP ปล่อยสัญญาณ Simple-Pair เพื่อกระจายข้อมูล AP_PASSWORD ออกไป
 }
-
-
-
