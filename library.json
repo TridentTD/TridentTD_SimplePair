@@ -1,0 +1,17 @@
+{
+  "name": "TridentTD_SimplePair",
+  "keywords": "ESP8266, Simple-Pair, WiFi",
+  "description": "ESP8266 Simple-Pair library that exchange basic data without connecting WiFi",
+  "homepage": "https://github.com/TridentTD/TridentTD_SimplePair",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TridentTD/TridentTD_SimplePair"
+  },
+  "version": "1.1",
+  "authors": {
+    "name": "TridentTD",
+    "url": "https://github.com/TridentTD/"
+  },
+  "frameworks": "arduino",
+  "platforms": "esp8266"
+}
