@@ -44,7 +44,7 @@ getSimplePairData	KEYWORD2
 setEspNowKey	KEYWORD2
 getEspNowKey	KEYWORD2
 setPassword16Byte	KEYWORD2
-getPassword16Byte	KEYWORD2s
+getPassword16Byte	KEYWORD2
 getSourceMacAddress	KEYWORD2
 getSourceMacAddress	KEYWORD2
 getDestinationMacAddress	KEYWORD2
@@ -64,7 +64,7 @@ getVersion	KEYWORD2
 #	Constants	(LITERAL1)
 #######################################
 
-SP_OFF		LITERAL1
+SP_OFF	LITERAL1
 SP_STA	LITERAL1
 SP_AP	LITERAL1
 
