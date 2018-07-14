@@ -64,7 +64,7 @@ getVersion	KEYWORD2
 #	Constants	(LITERAL1)
 #######################################
 
-SP_OFF		LITERAL1
+SP_OFF	LITERAL1
 SP_STA	LITERAL1
 SP_AP	LITERAL1
 
